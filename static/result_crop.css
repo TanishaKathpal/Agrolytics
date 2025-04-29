@@ -1,0 +1,179 @@
+/* Body and Background Setup with Gradient Animation */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #edf5ef, #d2e9db);
+    background-size: 400% 400%;
+    animation: gradientShift 18s ease infinite;
+    margin: 0;
+    padding: 0;
+    color: #2e3d30;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.7;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Main Result Container Styling */
+.result-container {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+    border-radius: 16px; /* Modern border radius */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1); /* Larger, more subtle shadow for depth */
+    padding: 3rem;
+    width: 100%;
+    max-width: 900px; /* Increased max-width */
+    color: #2e3d30;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Main Heading Styling */
+h1 {
+    font-size: 2rem; /* Larger heading for emphasis */
+    font-weight: 700;
+    color: #204d38;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase; /* Added uppercase for professionalism */
+}
+
+/* Subheading Styling */
+p {
+    font-size: 1.4rem;
+    color: #4f6b5d;
+    margin-top: 0.5rem;
+    font-style: semi-bold;
+}
+
+/* Label Box Styling for Results */
+.label-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #2e3d30;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Multi-column List Styling */
+.label-box ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    gap: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.label-box ul li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 22px;
+}
+
+.label-box ul li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Navigation Back Button Styling */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #2e3d30; /* Calmer greenish shade */
+    color: #d4ead7;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 255, 204, 0.2); /* Soft shadow */
+}
+
+a:hover {
+    background: #00cc99; /* Slightly darker shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 4rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #4c5c50;
+    text-align: center;
+    padding: 1.4rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+}
+
+/* Crop Prediction Code Display */
+.prediction-code {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4fd69c;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+/* Typography Enhancements */
+h2 {
+    color: #355c45; /* Dark green for subheadings */
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+h3 {
+    color: #4a624e; /* Slightly lighter green */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .result-container {
+        padding: 2rem;
+    }
+
+    .label-box ul {
+        columns: 1;
+    }
+
+    .prediction-code {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+
+    footer {
+        padding: 1.2rem;
+    }
+}

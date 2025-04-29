@@ -1,0 +1,116 @@
+/* Background and Body Setup */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #edf5ef, #d2e9db); /* Soft gradient background */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2e3d30;
+}
+
+/* Form Container Styling with Premium Glass Effect */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Light opaque white */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+.form-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #355c45;
+}
+
+/* Input Group - Two Columns */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Increased gap for more space between columns */
+    margin-bottom: 35px; /* Increased margin to create more space between rows */
+}
+
+.input-group.left, .input-group.right {
+    width: 48%; /* Ensures each side takes almost half of the space */
+}
+
+/* Label Styling */
+.input-group label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Increased font size for better readability */
+    text-align: left;
+    font-weight: 600;
+    color: #355c45;
+}
+
+/* Input Styling */
+.form-container input {
+    width: 100%;
+    padding: 18px; /* Increased padding for bigger input fields */
+    margin-top: 10px; /* More space between the label and input */
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem; /* Increased font size for readability */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for more focus */
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added transition for shadow */
+}
+
+/* Input Focus Styling */
+.form-container input:focus {
+    transform: scale(1.05); /* Slight scale-up effect */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Stronger focus shadow */
+}
+
+/* Button Styling */
+.form-container button {
+    margin-top: 40px;
+    padding: 18px 40px; /* Increased padding for a larger button */
+    font-size: 1.3rem; /* Larger font size for the button */
+    background: linear-gradient(135deg, #00b894, #019170);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-container button:hover {
+    background: linear-gradient(135deg, #019170, #00795c);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column; /* Stack the columns on smaller screens */
+    }
+
+    .input-group.left, .input-group.right {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 40px 30px;
+    }
+
+    .form-container button {
+        padding: 16px 35px;
+        font-size: 1.2rem;
+    }
+}
