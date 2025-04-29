@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='crop_recommendation.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Yield Prediction Form</h2>
+        <form action="/yield_prediction" method="POST">
+            <div class="input-group">
+                <div class="left">
+                    <label for="area">Select Area:</label>
+                    <select name="area" id="area" required>
+                        {% for key, value in area_label_map.items() %}
+                            <option value="{{ key }}">{{ value }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="right">
+                    <label for="item">Select Crop Item:</label>
+                    <select name="item" id="item" required>
+                        {% for key, value in item_label_map.items() %}
+                            <option value="{{ key }}">{{ value }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="left">
+                    <label for="pesticides">Pesticides (tonnes):</label>
+                    <input type="number" name="pesticides" step="any" placeholder="e.g. 1.5" required>
+                </div>
+                <div class="right">
+                    <label for="average_rainfall">Average Rainfall (mm/year):</label>
+                    <input type="number" name="average_rainfall" step="any" placeholder="e.g. 1200.5" required>
+                </div>
+            </div>
+
+
+            <button type="submit">🌾 Predict Yield</button>
+        </form>
+    </div>
+</body>
+</html>

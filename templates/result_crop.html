@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Result</title>
+    <link rel="stylesheet" href="static/result_crop.css">
+</head>
+<body>
+    <div class="result-container">
+        <!-- Display the Predicted Crop Code and Label -->
+        <h1>🌾 Crop Recommendation 🌾</h1>
+        <p>Predicted Crop Code: <strong>{{ prediction }}</strong></p>
+        <div class="prediction-code">
+            <p>Recommended Crop: {{ prediction_label }}</p>
+        </div>
+
+        
+        <div class="label-box">
+            <h3>Crop Label Map:</h3>
+            <ul>
+                <li>0: Apple</li>
+                <li>1: Banana</li>
+                <li>2: Blackgram</li>
+                <li>3: ChickPea</li>
+                <li>4: Coconut</li>
+                <li>5: Coffee</li>
+                <li>6: Cotton</li>
+                <li>7: Grapes</li>
+                <li>8: Jute</li>
+                <li>9: KidneyBeans</li>
+                <li>10: Lentil</li>
+                <li>11: Maize</li>
+                <li>12: Mango</li>
+                <li>13: MothBeans</li>
+                <li>14: MungMean</li>
+                <li>15: Muskmelon</li>
+                <li>16: Orange</li>
+                <li>17: Papaya</li>
+                <li>18: PigeonPeas</li>
+                <li>19: Pomegranate</li>
+                <li>20: Rice</li>
+                <li>21: Watermelon</li>
+            </ul>
+        </div>
+        
+
+        <a href="/"> Go Back</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>Minor Data Science Project: Somya Vats and Tanisha • 2025</div>
+    </footer>
+</body>
+</html>

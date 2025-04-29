@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="static/crop_recommendation.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Crop Recommendation Form</h2>
+        <form action="/crop_recommendation" method="POST">
+            <!-- Input Group with Two Columns -->
+            <div class="input-group">
+                <div class="left">
+                    <label for="nitrogen">Nitrogen (N):</label>
+                    <input type="number" name="nitrogen" step="any" placeholder="e.g. 90.5" required>
+                </div>
+                <div class="right">
+                    <label for="phosphorus">Phosphorus (P):</label>
+                    <input type="number" name="phosphorus" step="any" placeholder="e.g. 42.3" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="left">
+                    <label for="potassium">Potassium (K):</label>
+                    <input type="number" name="potassium" step="any" placeholder="e.g. 56.7" required>
+                </div>
+                <div class="right">
+                    <label for="temperature">Temperature (°C):</label>
+                    <input type="number" name="temperature" step="any" placeholder="e.g. 24.7" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="left">
+                    <label for="humidity">Humidity (%):</label>
+                    <input type="number" name="humidity" step="any" placeholder="e.g. 78.2" required>
+                </div>
+                <div class="right">
+                    <label for="ph">Soil pH:</label>
+                    <input type="number" name="ph" step="any" placeholder="e.g. 6.5" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="left">
+                    <label for="rainfall">Rainfall (mm):</label>
+                    <input type="number" name="rainfall" step="any" placeholder="e.g. 120.8" required>
+                </div>
+            </div>
+
+            <button type="submit">🌾 Recommend Crop</button>
+        </form>
+    </div>
+</body>
+</html>
